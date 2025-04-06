@@ -1,0 +1,27 @@
+.todo-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px; /* Space between cards */
+    margin-top: 24px;
+  }
+  
+  .todo-card {
+    width: 300px; /* Fixed width for horizontal layout */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 600px) {
+    .todo-list-container {
+      flex-direction: column; /* Stack vertically on mobile */
+      align-items: center; /* Center cards */
+      padding: 0 8px;
+    }
+  
+    .todo-card {
+      width: 100%; /* Full width on mobile */
+      margin: 0; /* Remove extra margins */
+    }
+  }

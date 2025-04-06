@@ -3,6 +3,7 @@ import { Layout, Typography, Form, Input, Button, message, Modal } from 'antd';
 import { useForm, Controller } from 'react-hook-form';
 import TodoList from './components/TodoList';
 import axios from 'axios';
+import './App.css'; // Add custom CSS for button positioning
 
 const { Header, Content } = Layout;
 const { Title } = Typography;
@@ -16,7 +17,7 @@ const App = () => {
   });
 
   const [todos, setTodos] = useState([]);
-  const [isModalVisible, setIsModalVisible] = useState(false); // Modal state
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
     fetchTodos();
@@ -38,7 +39,7 @@ const App = () => {
       reset();
       fetchTodos();
       message.success('Todo added successfully');
-      setIsModalVisible(false); // Close modal on success
+      setIsModalVisible(false);
     } catch (err) {
       message.error('Failed to add todo');
       console.error(err);
@@ -62,7 +63,7 @@ const App = () => {
 
   const handleCancel = () => {
     setIsModalVisible(false);
-    reset(); // Reset form when closing
+    reset();
   };
 
   return (
@@ -72,26 +73,22 @@ const App = () => {
           To-Do List
         </Title>
       </Header>
-      <Content style={{ padding: '24px', maxWidth: '800px', margin: '0 auto' }}>
-        {/* Add Todo Button */}
-        <Button
-          type="primary"
-          size="large"
-          onClick={showModal}
-          style={{ marginBottom: '24px' }}
-        >
-          Add Todo
-        </Button>
-
-        {/* Todo List */}
+      <Content style={{ padding: '24px', maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
+        <div className="add-todo-button-container">
+          <Button
+            type="primary"
+            size="large"
+            onClick={showModal}
+          >
+            Add Todo
+          </Button>
+        </div>
         <TodoList todos={todos} onComplete={handleCompleteTodo} />
-
-        {/* Modal with Form */}
         <Modal
           title="Add New Todo"
           visible={isModalVisible}
           onCancel={handleCancel}
-          footer={null} // Custom footer via form submit button
+          footer={null}
         >
           <Form
             onFinish={handleSubmit(onSubmit)}

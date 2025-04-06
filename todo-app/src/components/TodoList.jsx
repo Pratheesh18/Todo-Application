@@ -1,13 +1,13 @@
 import React from 'react';
 import { List, Card, Button, Tag } from 'antd';
 import { CheckCircleOutlined } from '@ant-design/icons';
-import './TodoList.css'; // Add custom CSS for layout
+import './TodoList.css';
 
 const TodoList = ({ todos, onComplete }) => {
   return (
-    <div className="todo-list-container" style={{ marginTop: '24px' }}>
+    <div className="todo-list-container">
       {todos.length === 0 ? (
-        <p style={{ textAlign: 'center', fontSize: '16px', color: '#888' }}>
+        <p style={{ textAlign: 'center', fontSize: '16px', color: '#888', marginTop: '24px' }}>
           No Todos yet!
         </p>
       ) : (
@@ -15,13 +15,7 @@ const TodoList = ({ todos, onComplete }) => {
           <Card
             key={todo.id}
             hoverable
-            style={{
-              borderRadius: '8px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-              marginBottom: '16px',
-              width: '100%',
-              maxWidth: '400px' // Limit card width for better layout
-            }}
+            className="todo-card"
           >
             <List.Item
               actions={[
