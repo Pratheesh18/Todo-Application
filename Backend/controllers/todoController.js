@@ -9,15 +9,15 @@ const createTodo = async (req, res) => {
   }
 
   try {
-    const task = await Todo.create({ title, description });
-    res.status(201).json(task);
+    const  todo  = await Todo.create({ title, description });
+    res.status(201).json(todo);
   } catch (error) {
     console.error('Error creating todo:', error);
     res.status(500).json({ error: 'Failed to create todo' });
   }
 };
 
-// Get 5 most recent incomplete tasks
+// Get 5 most recent incomplete todos
 const getRecentTodos = async (req, res) => {
   try {
     const todos = await Todo.findAll({
@@ -26,7 +26,7 @@ const getRecentTodos = async (req, res) => {
       limit: 5,
       attributes: ['id', 'title', 'description', 'createdAt']
     });
-    res.json(tasks);
+    res.json(todos);
   } catch (error) {
     console.error('Error fetching todos:', error);
     res.status(500).json({ error: 'Failed to fetch todos' });
@@ -39,7 +39,7 @@ const completeTodo = async (req, res) => {
 
   try {
     const todo = await Todo.findByPk(id);
-    if (!task || task.isCompleted) {
+    if (!todo || todo.isCompleted) {
       return res.status(404).json({ error: 'Todo not found or already completed' });
     }
 
