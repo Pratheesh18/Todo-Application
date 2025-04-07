@@ -16,6 +16,8 @@ const App = () => {
     }
   });
 
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+
   const [todos, setTodos] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -25,7 +27,7 @@ const App = () => {
 
   const fetchTodos = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/todos');
+      const response = await axios.get(`${API_URL}/todos`);
       setTodos(response.data);
     } catch (err) {
       message.error('Failed to fetch todos');
@@ -35,7 +37,7 @@ const App = () => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post('http://localhost:5000/api/todos', data);
+      await axios.post(`${API_URL}/todos`, data);
       reset();
       fetchTodos();
       message.success('Todo added successfully');
@@ -48,7 +50,7 @@ const App = () => {
 
   const handleCompleteTodo = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/todos/${id}/complete`);
+      await axios.put(`${API_URL}/todos/${id}/complete`);
       fetchTodos();
       message.success('Todo marked as completed');
     } catch (err) {

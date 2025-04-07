@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "start": "vite preview --port 3000 --host"
   },
   "jest": {
     "testEnvironment": "jsdom",
