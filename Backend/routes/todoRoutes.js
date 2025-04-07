@@ -3,7 +3,7 @@ const {
   createTodo,
   getRecentTodos,
   completeTodo
-} = require('../controllers/todoController');
+} = require('../controllers/todoController.js');
 
 const router = express.Router();
 

@@ -1,19 +1,21 @@
 const express = require('express');
-const todoRoutes = require('./routes/todoRoutes');
-const cors = require('cors')
+const todoRoutes = require('./routes/todoRoutes.js');
 require('dotenv').config();
+const cors = require('cors');
 
 const app = express();
 
-// Middleware
-app.use(express.json());
 app.use(cors());
-
-// Routes
+app.use(express.json());
 app.use('/api/todos', todoRoutes);
 
-// Start server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+const server = app.listen(PORT, (err) => {
+  if (err) {
+    console.error('Failed to start server:', err);
+    process.exit(1);
+  }
   console.log(`Server running on port ${PORT}`);
 });
+
+module.exports = app;
