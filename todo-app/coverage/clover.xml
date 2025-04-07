@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1744007771490" clover="3.2.0">
+  <project timestamp="1744007771490" name="All files">
+    <metrics statements="42" coveredstatements="30" conditionals="6" coveredconditionals="4" methods="12" coveredmethods="10" elements="60" coveredelements="44" complexity="0" loc="42" ncloc="42" packages="2" files="2" classes="2"/>
+    <package name="src">
+      <metrics statements="38" coveredstatements="26" conditionals="4" coveredconditionals="2" methods="9" coveredmethods="7"/>
+      <file name="App.jsx" path="C:\Todo-App\todo-app\src\App.jsx">
+        <metrics statements="38" coveredstatements="26" conditionals="4" coveredconditionals="2" methods="9" coveredmethods="7"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="18" type="stmt"/>
+        <line num="19" count="17" type="stmt"/>
+        <line num="20" count="17" type="stmt"/>
+        <line num="22" count="17" type="stmt"/>
+        <line num="23" count="9" type="stmt"/>
+        <line num="26" count="17" type="stmt"/>
+        <line num="27" count="9" type="stmt"/>
+        <line num="28" count="9" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="36" count="17" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="49" count="17" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="60" count="17" type="stmt"/>
+        <line num="61" count="5" type="stmt"/>
+        <line num="64" count="17" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="69" count="17" type="stmt"/>
+        <line num="107" count="5" type="stmt"/>
+        <line num="121" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="TodoList.jsx" path="C:\Todo-App\todo-app\src\components\TodoList.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="20" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
