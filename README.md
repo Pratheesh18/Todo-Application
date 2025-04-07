@@ -11,8 +11,6 @@ A full-stack todo application built with React.js, Express.js, MySQL, and Ant De
   - [Running with Docker](#running-with-docker)
 - [Project Structure](#project-structure)
 - [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
